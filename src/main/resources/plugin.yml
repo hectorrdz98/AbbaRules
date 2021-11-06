@@ -1,0 +1,14 @@
+name: AbbaRules
+version: '${project.version}'
+main: dev.sasukector.hundreddaysuhc.AbbaRules
+api-version: 1.17
+authors: [ Sasukector ]
+description: This is the core plugin for AbbaRules
+website: https://sasukector.dev
+commands:
+  game:
+    description: Command to manage game
+    usage: /game [option] [subOption]
+  points:
+    description: Command to manage points
+    usage: /points [option] [suboption]
