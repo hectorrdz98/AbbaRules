@@ -12,6 +12,8 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -44,6 +46,7 @@ public class GameController {
         player.setFireTicks(0);
         player.setVisualFire(false);
         player.getActivePotionEffects().forEach(p -> player.removePotionEffect(p.getType()));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 99999, 0));
         player.getInventory().clear();
         player.updateInventory();
     }
